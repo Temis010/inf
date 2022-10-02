@@ -41,3 +41,4 @@ elif x == '7':
     print(ocr(zad, x, dig))
 else:
     print('Такой операции в списке нет')
+#proba
