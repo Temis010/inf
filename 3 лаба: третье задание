@@ -1,29 +1,9 @@
-# O(3n) = O(n)
+# O(1)
 
 a = [4, 3, 2, 1]
-count = 0
-for i in a:
-    count = count + 1
-print(count)
+print(a[1])
 
-# O(nlog(n))
-
-a = [3, 10, 765, 203, 13, 900, 1000]
-a.sort()
-print(a)
-
-# O(n!)
-
-
-#O(n^3)
-print('x y z')
-for x in range(2):
-    for y in range(2):
-        for z in range(2):
-            if not(not(x <= y) or ((not(x)) <= (not(z))) or y):
-                print(x, y, z)
-
-# O(3log(n)) = O(log(n))
+# O(log(n))
 
 a = int(input('Введи количество чисел: '))
 s = []
@@ -51,5 +31,14 @@ else:
     print('У числа индекс', m)
     print('Шаги', q)
 
+#O(n^2)
 
+
+print('x y')
+for x in range(2):
+    for y in range(2):
+        if ((x<y) and ((not(y)) <= x)):
+            print(x, y)
+
+# O(2^n)
 
