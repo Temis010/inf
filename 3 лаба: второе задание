@@ -14,6 +14,20 @@ print(a)
 
 # O(n!)
 
+def factorial(container, n):
+      if n == 1:
+            print(container)
+            return
+      for i in range(n):
+            factorial(container, n - 1)
+            if n % 2 == 0:
+                  container[i], container[n-1] = container[n-1], container[i]
+            else:
+                  container[0], container[n - 1] = container[n - 1], container[0]
+if __name__ == '__main__':
+      a = int(input('Введите: '))
+      container = [1, 2, 3, 4, 5, 6, 7, 8]
+print(factorial(container, len(container)))
 
 #O(n^3)
 print('x y z')
