@@ -1,0 +1,55 @@
+# O(3n) = O(n)
+
+a = [4, 3, 2, 1]
+count = 0
+for i in a:
+    count = count + 1
+print(count)
+
+# O(nlog(n))
+
+a = [3, 10, 765, 203, 13, 900, 1000]
+a.sort()
+print(a)
+
+# O(n!)
+
+
+#O(n^3)
+print('x y z')
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            if not(not(x <= y) or ((not(x)) <= (not(z))) or y):
+                print(x, y, z)
+
+# O(3log(n)) = O(log(n))
+
+a = int(input('Введи количество чисел: '))
+s = []
+for i in range(a):
+    b = int(input(''))
+    s.append(b)
+s.sort()
+print(s)
+d = int(input('Введи число, кторое нужно найти: '))
+m = len(s)//2
+low = 0
+high = len(s) - 1
+q = 1
+while s[m] != d and low <= high:
+    if d > s[m]:
+        low = m + 1
+    else:
+        high = m - 1
+    m = (low + high)//2
+    q = q + 1
+if low > high:
+    print('Такого числа нет')
+    print('Шаги', q)
+else:
+    print('У числа индекс', m)
+    print('Шаги', q)
+
+
+
